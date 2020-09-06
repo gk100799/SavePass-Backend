@@ -1,10 +1,13 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-const port = 4000
+var cors = require('cors');
+
+const port = process.env.PORT || 4000
 const app = express();
 
 app.use(bodyParser.json());
+app.use(cors())
 
 const accountRoute = require('./routes/accounts')
 const authRoute = require('./routes/auth')
