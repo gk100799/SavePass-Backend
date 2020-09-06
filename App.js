@@ -15,7 +15,7 @@ const authRoute = require('./routes/auth')
 app.use('/account', accountRoute);
 app.use('/user', authRoute);
 
-app.get('cron-job',(req,res) => {
+app.get('/',(req,res) => {
     res.send("This is an api for Cron-Job")
 })
 
